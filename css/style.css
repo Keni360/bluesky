@@ -3,161 +3,30 @@
 body{
     width:100%;
     height:100vh;
-    overflow-x: hidden;
-}
-
-#home{
-    width:100%; 
-    height:100vh; 
-    background-color:#80E5FF;
-    display:block;
-    position:relative;
     
 }
 
-#predios{
+
+header#cabecalho{
+    border:solid red 0px;
     width:100%;
-    height:20vh; 
+    height: 12vh;
+    min-height: 80px;
     display:block;
-    bottom:0;
-    position:absolute;
-    background-image:url('../img/predio.png'); 
-    background-repeat:no-repeat; 
-    background-position:-50px 0px;
-    background-size:110% 140%;
-    z-index: 2;
-    
-}
-
-/*#outdoor{
-    width:50%;
-    height:70%;
-    display:block;
-    position:absolute;
-    border:solid red 1px;
+    position:fixed;
+    top:0;
     left:0;
-    bottom:20%;
-    background-image: url('../img/outdoor.png');
-    background-repeat:no-repeat;
-    background-position:bottom;
-    background-size:100%;
-    z-index: 1;
-}*/
-
-.outdoor{
-    color:rgba(0,0,0,.4);
-    text-align: center;
-    padding:1%;
-    width:50%;
-    max-width:50%;
-    height:50%;
-    max-height:50%;
-    display:inline-block;
-    position:absolute;
-    border:solid #FF8080 10px;
-    border-radius: 15px;
-    background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
-    bottom:30%;
-    
-    
+    z-index: 20;
 }
 
-
-
-
-.outdoor:before{
-    content:"";
-    width:2%;
-    height:50%;
-    bottom:-50%;
-    
-    left:5%;
-    display:inline-block;
-    position:absolute;
-    background-color:#FF8080;
-    
-}
-
-.outdoor:after{
-    content:"";
-    width:2%;
-    height:50%;
-    bottom:-50%;
-    
-    right:5%;
-    display:inline-block;
-    position:absolute;
-    background-color:#FF8080;
-    
-}
-
-.faixa, .faixa h1{
-    display:block;
-    width:70%;
-    margin:auto;
-    height:40px;
-    background-color:#FF8080;
-    position:relative;
-    z-index: +2;
-}
-
-.faixa h1{
-    top:10px;
-    width:100%;
-    color:#fff;
-    }
-
-.faixa:after{
-    display:inline-block;
-    content:"";
-    width:20px;
-    z-index:0 ;
-    position:absolute;
-    top:20px;
-    right:-45px;
-    border:solid #FF8080 25px;
-    border-right:solid transparent 25px;
-    border-left:solid #FF5555 25px;
-}
-
-.faixa:before{
-    display:inline-block;
-    content:"";
-    width:20px;
-    z-index:0 ;
-    position:absolute;
-    top:20px;
-    left:-45px;
-    border:solid #FF8080 25px;
-    border-left:solid transparent 25px;
-    border-right:solid #FF5555 25px;
-}
-
-.outdoor .aside{
-    font-size :1.2em;
-    diplay:inline-block;
-    position:absolute;
-    top:140px;
-    width:50%;
-    border:solid transparent 1px;
-}
-
-.outdoor figure{
-    border:solid 1px transparent;
-    display:inline-block;
-    position:absolute;
-    height:50px;
-    width:50%;
-    top:140px;
-}
 /*Navegação do menu*/
-.nav-menu{position:absolute;display:inline-block;width:460px; height:100px; right:10px; z-index: 10; top:10px;}
+.nav-menu{position:absolute;display:inline-block;width:auto; height:100px; right:5%; z-index: 0; top:10px;}
 
 
 
 
 .menu, .menu ul {
-    display:inline-block;width:380px; height:40px;position:relative;background-color:#FF8080;list-style: none; color:#fff;
+    display:inline-block;width:300px; height:40px;position:relative;background-color:#FF8080;list-style: none; color:#fff;
     
 }
 
@@ -190,6 +59,299 @@ body{
 }
 
 
+
+
+section#home{
+    width:100%; 
+    height:100vh;
+    background-color:#80E5FF;
+    display:block;
+    position:relative;
+    overflow: hidden;
+}
+
+section#home:after{
+    content:'';
+    width:100%;
+    height:20%;
+    display:block;
+    position:absolute;
+    bottom:0;
+    background-image:url('../img/predio.png');
+    background-size: 102% 150%;
+    background-position: -10px -1% ;
+    background-repeat: no-repeat;
+}
+
+.outdoor{
+    color:rgba(0,0,0,.4);
+    text-align: center;
+    width:50%;
+    max-width:50%;
+    min-width:500px;
+    height:50%;
+    max-height:50%;
+    display:inline-block;
+    position:absolute;
+    border: 10px solid #ff8080;
+    border-radius: 15px;
+    background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+    bottom:25%;
+    
+    
+}
+
+
+
+
+.outdoor:before{
+    content:"";
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    
+    left:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+.outdoor:after{
+    content:"";
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    right:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+
+div#slideshow{
+    width:100%;
+    max-width:100%;
+    min-width:500px;
+    height:100%;
+    max-height:100%;
+    position:relative;
+    overflow: hidden;
+    
+}
+
+div#slideshow section{
+    padding:1%;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:100%;
+    background-color: transparent;
+    transition: all 1s;
+    
+}
+
+div#slideshow section:last-child{left:0;}
+
+/*Estilização do primeiro slide*/
+div#slideshow section:nth-child(1) figure img{
+    width:70%;
+    max-width: 300px;
+    
+    bottom:0;
+}
+
+div#slideshow section:nth-child(3) figure img{
+   padding-top:15%;
+}
+
+div#slideshow section header{
+    display:block;
+    margin-bottom: 8%;
+}
+
+div#slideshow section aside{
+    display:block;
+    float:left;
+    width:60%;
+    height:60%;
+    
+}
+
+div#slideshow section aside p{
+    text-align: center;
+    font-size: 1.5em;
+    padding-top:6%;
+    width:100%;
+    font-weight: bold;
+    -moz-hyphens: manual;
+    hyphens: manual;
+    
+}
+
+div#slideshow section figure{
+    width:39%;
+    height:60%;
+    float:right;
+    
+}
+
+div#slideshow section figure img{
+    width:100%;
+    max-width:200px;
+}
+
+div#slideshow section footer{
+    clear:both;
+    display:block;
+    width:80%;
+    height:15%;
+    margin-left:10%;
+    
+}
+
+.ativo {left:0; opacity:0;}
+
+/*div#slideshow:hover :nth-child(2) {left:0%;} */
+
+/*#outdoor{
+    width:50%;
+    height:70%;
+    display:block;
+    position:absolute;
+    border:solid red 1px;
+    left:0;
+    bottom:20%;
+    background-image: url('../img/outdoor.png');
+    background-repeat:no-repeat;
+    background-position:bottom;
+    background-size:100%;
+    z-index: 1;
+}*/
+
+
+/*section#slideshow{ 
+    width:100%;
+    height:99%;
+    dislplay:block;
+    border:solid green 1px; 
+    padding:.5% 0;
+    overflow: hidden;
+    
+}
+
+
+section#slideshow footer{
+    position:absolute;
+    border:solid 1px red;
+    display:block;
+    bottom:0px;
+    width:50%;
+    left:25%;
+    bottom:1%;
+    text-align: center;
+}
+
+
+section#slideshow header{
+    border:solid green 1px;
+    width:100%;
+    height:70px;
+    
+}
+
+section#slideshow > div {
+    border:solid blue 1px;width:100%; height:100%;display:inline-block;background-color:transparent;transition:all 1s;position:relative;left:90%;top:0;
+}
+
+.ativo {
+    left:0;
+}
+
+section#slideshow aside{
+    
+    display:block;
+    position:relative;
+    top:10%;
+    width:50%;
+    border:solid transparent 1px;
+}
+
+section#slideshow figure{
+    border:solid 1px transparent;
+    display:inline-block;
+    position:absolute;
+    height:50px;
+    min-width:100px;
+    max-width:50%;
+    top:40%;
+}
+
+*/
+
+
+.faixa, .faixa  :nth-child(1){
+    display:block;
+    width:70%;
+    margin:auto;
+    height:40px;
+    background-color:#FF8080;
+    position:relative;
+    z-index: 1;
+}
+
+/* Classe que renderiza a faixa vermelha */
+/*  Onde o :nth-child(1) representa o conteudo que irá para dentro da faixa (qualquer tag que for usada para escrever o titulo)    */
+.faixa :nth-child(1){
+    top:10px;
+    width:100%;
+    color:#fff;
+    }
+
+.faixa:after{
+    display:inline-block;
+    content:"";
+    width:20px;
+    z-index:0 ;
+    position:absolute;
+    top:20px;
+    right:-45px;
+    border:solid #FF8080 25px;
+    border-right:solid transparent 25px;
+    border-left:solid #FF5555 25px;
+}
+
+.faixa:before{
+    display:inline-block;
+    content:"";
+    width:20px;
+    z-index:0 ;
+    position:absolute;
+    top:20px;
+    left:-45px;
+    border:solid #FF8080 25px;
+    border-left:solid transparent 25px;
+    border-right:solid #FF5555 25px;
+}
+
+ .circle{
+    position:absolute;
+    display:block;
+    width:100px;
+    height:100px;
+    border:solid red 2px;
+    background-color:#FFE6D5;
+    bottom:20px;
+    right:50px;
+    
+}
+
+
+
+
 .nuvem{
     display:inline-block;
     width:8%;
@@ -205,7 +367,7 @@ body{
 
 
 #nuvem1{
-	top:10%;
+	top:5%;
 	left:0px;
 }
 
