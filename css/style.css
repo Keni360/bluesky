@@ -142,7 +142,7 @@ div#slideshow{
 }
 
 div#slideshow section{
-    padding:1%;
+    padding: .5% 0;
     width:100%;
     height:100%;
     display:inline-block;
@@ -154,6 +154,7 @@ div#slideshow section{
     
 }
 
+/*Primeiro slide ativo*/
 div#slideshow section:last-child{left:0;}
 
 /*Estilização do primeiro slide*/
@@ -177,7 +178,7 @@ div#slideshow section aside{
     display:block;
     float:left;
     width:60%;
-    height:60%;
+    height:50%;
     
 }
 
@@ -193,9 +194,10 @@ div#slideshow section aside p{
 }
 
 div#slideshow section figure{
-    width:39%;
-    height:60%;
+    width:35%;
+    height:55%;
     float:right;
+    margin-right: 2%;
     
 }
 
@@ -208,89 +210,12 @@ div#slideshow section footer{
     clear:both;
     display:block;
     width:80%;
-    height:15%;
+    height:10%;
     margin-left:10%;
     
 }
 
 .ativo {left:0; opacity:0;}
-
-/*div#slideshow:hover :nth-child(2) {left:0%;} */
-
-/*#outdoor{
-    width:50%;
-    height:70%;
-    display:block;
-    position:absolute;
-    border:solid red 1px;
-    left:0;
-    bottom:20%;
-    background-image: url('../img/outdoor.png');
-    background-repeat:no-repeat;
-    background-position:bottom;
-    background-size:100%;
-    z-index: 1;
-}*/
-
-
-/*section#slideshow{ 
-    width:100%;
-    height:99%;
-    dislplay:block;
-    border:solid green 1px; 
-    padding:.5% 0;
-    overflow: hidden;
-    
-}
-
-
-section#slideshow footer{
-    position:absolute;
-    border:solid 1px red;
-    display:block;
-    bottom:0px;
-    width:50%;
-    left:25%;
-    bottom:1%;
-    text-align: center;
-}
-
-
-section#slideshow header{
-    border:solid green 1px;
-    width:100%;
-    height:70px;
-    
-}
-
-section#slideshow > div {
-    border:solid blue 1px;width:100%; height:100%;display:inline-block;background-color:transparent;transition:all 1s;position:relative;left:90%;top:0;
-}
-
-.ativo {
-    left:0;
-}
-
-section#slideshow aside{
-    
-    display:block;
-    position:relative;
-    top:10%;
-    width:50%;
-    border:solid transparent 1px;
-}
-
-section#slideshow figure{
-    border:solid 1px transparent;
-    display:inline-block;
-    position:absolute;
-    height:50px;
-    min-width:100px;
-    max-width:50%;
-    top:40%;
-}
-
-*/
 
 
 .faixa, .faixa  :nth-child(1){
@@ -350,7 +275,150 @@ section#slideshow figure{
 }
 
 
+/*
+    ====================================================
+    ==          Section Sobre mim                    ===
+    ====================================================
+*/
 
+
+section#sobremim{
+    display:block;
+    height:100vh;
+    width:100%;
+    background-color:#FFB380;
+    position:relative;
+    overflow: hidden;
+}
+
+/* //Mesa */
+#mesa{
+    display:block;
+    width:100%;
+    height:100%;
+    border:solid black 1px;
+    background-image:url('../img/mesa_completa2.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position:0% 0%;
+    
+}
+
+/* 
+//coluna de livros  
+*/
+#coluna-esquerda{
+    bottom:22%;
+    left:10%;
+    z-index: 2;
+}
+
+#coluna-direita{
+    bottom:22%;
+    left:45%;
+    
+    display: inline-block;
+    z-index: 1;
+}
+
+#coluna-direita::before{
+    content:open-quote "Gráficos web"close-quote; /*aqu*/
+}
+
+#coluna-esquerda::before{
+    content:open-quote "Linguagens e Frameworks"close-quote; /*aqu*/
+}
+
+/*Renderiza o bilhete amarelo acima da coluna de livros*/
+.coluna-livros::before{
+    content: "";
+    display:block;
+    position:relative;
+    width:150px;
+    height:70px;
+    margin:auto;
+    padding-top:40px;
+    bottom:50px;
+    text-align: center;
+    font-weight: bold;
+    color:rgba(0,0,0,.6);
+    background-color: #FBE58E;
+    background-image: url("../img/bolinha.png");
+    background-repeat: no-repeat;
+    background-position: 50% 10% ;
+    transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    
+}
+
+
+.coluna-livros{
+    max-width:307px;
+    height:auto;
+    display:inline-block;
+    position:absolute;
+}
+
+
+.coluna-livros figure{
+    display:block;
+    width:100%;
+    left:0px;
+    height:37px;
+    position:relative;
+    transition:all .7s;
+    overflow: hidden;
+}
+.coluna-livros figure img{
+    left:0;
+    position:relative;
+    cursor:pointer;
+    z-index: 2;
+}
+
+/*Renderiza a caixa de informação do respectivo livro*/
+.coluna-livros figure figcaption{
+    display: block;
+    position:absolute;
+    padding: 10px 5px;
+    border-radius: 2px;
+    width:100px;
+    height:auto;
+    right:10%;
+    background-color:#FFDD55;
+    opacity:0;
+    transition: all .8s;
+    transition-delay: .2s;
+    top:3px;
+    font-size: .8em ;
+    color:rgba(0,0,0,.6);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.coluna-livros figure figcaption:before{
+    content:"";
+    display:block;
+    border:solid transparent 10px;
+    border-right:solid #FFDD55 10px;
+    position:absolute;
+    top:7px;
+    left:-19px;
+}
+
+.coluna-livros figure:hover {
+    left:30px;
+    opacity:1;
+    overflow: visible;
+}
+
+.coluna-livros figure:hover figcaption{
+    opacity:1;
+    right:-125px;
+    transition:all 1s, opacity 1.5s;
+}
 
 .nuvem{
     display:inline-block;
