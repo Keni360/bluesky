@@ -70,6 +70,48 @@ section#home{
     overflow: hidden;
 }
 
+
+.nuvem{
+    display:inline-block;
+    width:8%;
+    min-height:20%;
+    position:absolute;
+    /*border:solid red 1px;*/
+    background-image:url('../img/nuvem.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    
+}
+
+
+
+#nuvem1{
+	top:5%;
+	left:0px;
+}
+
+
+
+#nuvem2{
+	top:25%;
+	left:0px;
+    width:15%;
+
+}
+
+#nuvem3{
+	top:50%;
+	left:900px;
+}
+
+#nuvem4{
+	top:80%;
+	left:600px;
+    width:4%;
+}	
+
+
+
 section#home:after{
     content:'';
     width:100%;
@@ -350,7 +392,7 @@ section#sobremim{
     content: "";
     display:block;
     position:relative;
-    width:150px;
+    width:70%;
     height:70px;
     margin:auto;
     padding-top:40px;
@@ -438,41 +480,162 @@ section#sobremim{
     transition:all 1s, opacity 1.5s;
 }
 
-.nuvem{
-    display:inline-block;
-    width:8%;
-    min-height:20%;
+/*
+    Portifólio
+*/
+
+section#portifolio{
+    width:100%;
+    height:100vh;
+    background-color:#FFB380;
+    overflow:hidden;
+    position:relative;
+}
+
+section#portifolio header{
+    height:15%;
+    width:100%;
+    display:block;
+    text-align:center;
+    
+}
+section#portifolio header hgroup .faixa{display:block; margin:3% auto;width:200px;} 
+
+/*Container que flutua a esquerda*/
+section#portifolio #aside-layout-container{
+    display:block;
     position:absolute;
-    /*border:solid red 1px;*/
-    background-image:url('../img/nuvem.png');
-    background-size:100%;
-    background-repeat:no-repeat;
+    top:0;
+    width:30%;
+    height:100%;
+    padding-top:10%;
+    background-color:rgba(0,0,0,.1);
     
 }
 
-
-
-#nuvem1{
-	top:5%;
-	left:0px;
+#aside-layout-container figure{
+    float:left;
+    width:49.9%;
+    height:30%;
+    cursor: pointer;
+    position:relative;
+    overflow:hidden;
+    font-weight:bold;
 }
 
-
-
-#nuvem2{
-	top:25%;
-	left:0px;
-    width:15%;
+#aside-layout-container figure:before, #aside-layout-container figure:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color:rgba(77,22,10,.7);
+    margin-top:200px;
+    transition:all .7s;
 
 }
 
-#nuvem3{
-	top:50%;
-	left:900px;
+#aside-layout-container figure:after{
+    background-color:transparent;
+    border:solid #fff 5px;
+    width:80%;
+    height:80%;
+    left:5%;
+    top:5%;
 }
 
-#nuvem4{
-	top:80%;
-	left:600px;
-    width:4%;
-}	
+#aside-layout-container figure:hover:after, #aside-layout-container figure:hover:before{
+    margin-top:0;
+    
+}
+
+#aside-layout-container figure:hover figcaption{
+    top:auto;
+    opacity:1;
+}
+
+#aside-layout-container figure figcaption{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding-top:10%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:opacity .5s;
+    transition-delay:.5s;
+    top:120%;
+}
+
+/*Container que flutua a direita com o conteudo prévio do layout selecionado a esquerda*/
+section#portifolio #preview-layout-container{
+    width:70%;
+    display:block;
+    float:right;
+    height:80%;
+}
+
+section#portifolio #preview-layout-container .mokup-note,.mokup-smarth{
+    float:left;
+    width:50%;
+    height:60%;
+    padding:5%;
+    border:solid red 1px;
+    position:relative;
+}
+
+.mokup-note:after{
+    content:"";
+    position:absolute;
+    border:solid red 1px;
+    width:400px;
+    height:180px;
+    bottom:20px;
+    left:0;
+    z-index:2;
+    background-image: url("../img/mokup-note.png");
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:bottom;
+}
+.mokup-note img{
+    width:260px;
+    height:160px;
+    border:solid red 1px;
+    position:absolute;
+    left:70px;
+    bottom:10%;
+    z-index:1;
+    
+}
+.mokup-smarth{
+    width:20%;
+    
+}
+
+.mokup-smarth:after{
+    content:"";
+    display:block;
+    width:170px;
+    height:100%;
+    border:solid blue 1px;
+    top:0;
+    left:0;
+    background-image:url("../img/mokup-cel.png");
+    background-size:auto auto;
+    background-repeat:no-repeat;
+    background-repeat:;
+    position:absolute;
+    z-index:2;
+}
+
+.mokup-smarth img{
+    position:absolute;
+    left:1%;
+    top:10px;
+    width:100px;
+    height:170px;
+    
+}
