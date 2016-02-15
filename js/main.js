@@ -109,6 +109,47 @@ window.onload = function(){
         
         
         alert(slide.slideAtual);
+   
         
-    
+        
+   /*================================================
+    *   Mokup selector
+    * ===============================================
+    */
+        var mokupNote = document.querySelector(".mokup-note img");
+        var mokupCel = document.querySelector(".mokup-cel img");
+        var containerLayout = document.querySelector("#container-layouts");
+        var lastImg =  containerLayout.firstElementChild.firstElementChild.getAttribute("alt"); //retorna captura o titulo da primeira imagem do container - layout
+        containerLayout.addEventListener("click",function(e){
+                var layoutAtual = e.target.parentElement;
+                var img = layoutAtual.firstElementChild.getAttribute("alt");
+                lastImg = img;
+                ultimoLayoutAtivo.srcMob = mokupCel.getAttribute("src");
+                mokupNote.setAttribute("src","img/"+img+".png");
+                mokupCel.setAttribute("src","img/"+img+"-mobile.png");
+            //alert(layoutAtual.firstElementChild.getAttribute("src"));
+                
+                
+        },false);
+        
+        containerLayout.addEventListener("mouseover",function(e){
+                var layoutMouseHover = e.target.parentElement;
+                var img = layoutMouseHover.firstElementChild.getAttribute("alt");
+                mokupNote.setAttribute("src","img/"+img+".png");
+                mokupCel.setAttribute("src","img/"+img+"-mobile.png");
+            //alert(layoutAtual.firstElementChild.getAttribute("src"));
+                
+                
+        },false);
+        
+    containerLayout.addEventListener("mouseout",function(e){
+                
+                
+                mokupNote.setAttribute("src","img/"+lastImg+".png");
+                mokupCel.setAttribute("src","img/"+lastImg+"-mobile.png");
+            //alert(layoutAtual.firstElementChild.getAttribute("src"));
+                
+                
+        },false);
+        
     }   
