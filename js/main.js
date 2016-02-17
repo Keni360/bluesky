@@ -108,7 +108,7 @@ window.onload = function(){
         },8000)
         
         
-        alert(slide.slideAtual);
+        //alert(slide.slideAtual);
    
         
         
@@ -150,6 +150,18 @@ window.onload = function(){
             //alert(layoutAtual.firstElementChild.getAttribute("src"));
                 
                 
+        },false);
+        
+        
+        /*
+                FOrmulario de contato
+        */
+        
+        var btn = document.querySelector(".btn-submit");
+        
+        btn.addEventListener("click",function(e){
+                e.preventDefault();
+                alert("clicou");
         },false);
         
     }   

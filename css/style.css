@@ -735,6 +735,12 @@ section#sobremim{
     
 }
 
+.section-title h3{
+    margin-top:15%;
+    color:rgba(0,0,0,.6);
+}
+
+
 
 .btn-raid{
     outline: none;
@@ -769,4 +775,175 @@ section#sobremim{
     z-index: 0;
     border:solid #FFB380 1px;
     border-radius:20px;
+}
+
+
+/*
+    ==================================================
+    # Sessão de Contato                              #
+    ==================================================
+*/
+
+
+#contato {
+    width:100%;
+    height:100vh;
+    display:block;
+    background-color:#FFCCAA;
+}
+#contato .section-title{height:auto;margin-bottom:20px;}
+
+#contato .left-container{
+    width:300px;
+    height:100vh;
+    float:left;
+    background-color:#FFB380;
+    position:relative;
+}
+#contato .right-container{
+    
+    float:right;
+    width:60%;
+    height:100vh;
+    float:right;
+    display:block;
+    position:relative;
+}
+
+#contato .right-container:after{
+    content:"";
+    width:100%;
+    height:130px;
+    position:absolute;
+    bottom:0;
+    
+    background-image:url("../img/predio1.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:5px 0px;
+}
+
+#contato .right-container .balao{
+    position:absolute;
+    bottom:200px;
+}
+
+.contato-form{
+    width:100%;
+    height:auto;
+    position:absolute;
+    bottom:10%;
+}
+
+.contato-form:before{
+    content:"Mande uma mensagem :D";
+    width:100%;
+    height:auto;
+    font-size:1.2em;
+    padding-bottom:30px;
+    font-weight:bold;
+    color:rgba(0,0,0,.7);
+    text-align:center;
+    display:block;
+    
+}
+
+.contato-form input, .contato-form textarea{
+    width:95%;
+    display:block;
+    margin:2% auto;
+    padding:15px 5px;
+    border:solid transparent 2px;
+    border-radius:5px;
+    border-radius:;
+}
+
+
+
+.balao{
+    width:250px;
+    height:auto;
+    padding:25px;
+    border-radius:20px;
+    background-color:#fff;
+    position:relative;
+}
+
+
+.balao h3{
+    margin:50px auto;
+    text-align:center;
+}
+
+.balao:after {
+    content:"";
+    position:absolute;
+    width:40px;
+    height:40px;
+    
+    bottom:-2px;
+    right:-15px;
+    background-image:url("../img/ponta.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.balao:before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    bottom:-100px;
+    right:-130px;
+    background-image:url("../img/char-megafone.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.list-icon{
+    list-style:none;
+    font-weight:bold;
+    color:rgba(0,0,0,.6);
+}
+.list-icon li{
+    margin-top:5px;
+    position:relative;
+    
+}
+
+.list-icon li  img{
+    width:20px;
+    height:auto;
+    position:relative;
+    top:5px;
+    left:-5px;
+}
+
+
+
+.btn-submit{
+   background-color:#D7F4D7;
+   width:95%;
+   display:block;
+   margin:2% auto;
+   padding:5% 0%;
+   font-weight:bold;
+   border-radius:5px;
+   text-align:center; 
+   font-size:1em;
+   cursor:pointer; 
+   color: #005500;
+   outline:0;
+   transition:all .5s;
+}
+
+input:focus{
+    outline:0;
+}
+.btn-submit:focus{
+    outline:none;
+}
+
+.btn-submit:hover{
+    background-color:#7FB37F;
 }
