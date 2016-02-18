@@ -1,7 +1,7 @@
 window.onload = function(){
     
         var teste = document.querySelector('#nuvens');
-    
+        var telaR = document.querySelector("#resolution");     
     
             //Classe nuvem
             var nuvem = function(id){
@@ -38,6 +38,9 @@ window.onload = function(){
                nuvem2.mover(-400, 200);
                nuvem3.mover(-600, 300);
                nuvem4.mover(-100, 400);
+                    
+               
+                    telaR.innerHTML = "Largura: "+(document.body.clientWidth -10);
             }
 
             setInterval(update,16);
@@ -49,6 +52,8 @@ window.onload = function(){
    
          var Slideshow = function(elemento){
             this.elemento = elemento;
+            this.after = elemento+":after";
+            this.before = elemento+":before";
             this.slideshow = document.querySelector(elemento);
             this.slideshow.childElementCount;
             this.i = 1;
@@ -95,6 +100,8 @@ window.onload = function(){
                  
              }
              
+                
+             
              
             }
                 
@@ -118,12 +125,19 @@ window.onload = function(){
     */
         var mokupNote = document.querySelector(".mokup-note img");
         var mokupCel = document.querySelector(".mokup-cel img");
+        var btnLink = document.getElementById("btnLink");
         var containerLayout = document.querySelector("#container-layouts");
         var lastImg =  containerLayout.firstElementChild.firstElementChild.getAttribute("alt"); //retorna captura o titulo da primeira imagem do container - layout
+        //Definindo o primeiro link ativo de acordo com o primeiro layout ativo
+        btnLink.setAttribute("href",containerLayout.firstElementChild.querySelector("a").getAttribute("href"));
+        
         containerLayout.addEventListener("click",function(e){
                 var layoutAtual = e.target.parentElement;
                 var img = layoutAtual.firstElementChild.getAttribute("alt");
                 lastImg = img;
+                var link = layoutAtual.querySelector("a");
+                
+                btnLink.setAttribute("href",link);
                 ultimoLayoutAtivo.srcMob = mokupCel.getAttribute("src");
                 mokupNote.setAttribute("src","img/"+img+".png");
                 mokupCel.setAttribute("src","img/"+img+"-mobile.png");
@@ -142,7 +156,7 @@ window.onload = function(){
                 
         },false);
         
-    containerLayout.addEventListener("mouseout",function(e){
+        containerLayout.addEventListener("mouseout",function(e){
                 
                 
                 mokupNote.setAttribute("src","img/"+lastImg+".png");
@@ -151,6 +165,9 @@ window.onload = function(){
                 
                 
         },false);
+        
+        
+        
         
         
         /*

@@ -9,25 +9,44 @@ body{
 
 header#cabecalho{
     border:solid red 0px;
-    width:100%;
+    width:600px;
     height: 12vh;
     min-height: 80px;
     display:block;
+    
     position:fixed;
     top:0;
-    left:0;
+    right:0;
     z-index: 20;
 }
 
 /*Navegação do menu*/
-.nav-menu{position:absolute;display:inline-block;width:auto; height:100px; right:5%; z-index: 0; top:10px;}
+.nav-menu{position:absolute;display:inline-block;width:auto; height:100px; right:0; z-index: 0; top:0;padding-top:20px;}
 
+.menu-offCanvas{position:relative;right:-320px;color:#fff;font-weight:bold;transition:all 1s; display:none;}
+.menu-offCanvas ul{list-style:none; background-color:;display:block;width:auto; height:auto;overflow:hidden;}
+
+.menu-offCanvas ul:before{
+    content:"";
+    display:block;
+    border:solid transparent 20px;
+    border-right:solid #FF8080 20px;
+    float:left;
+}
+.menu-offCanvas ul li{display:inline-block;float:left; padding:10.5px 8px;background-color:#FF8080;transition:all .5s;cursor:pointer;}
+
+.menu-offCanvas:hover{
+    right:0;
+}
+
+.menu-offCanvas li:hover{
+    background-color:#FF5555;
+}
 
 
 
 .menu, .menu ul {
-    display:inline-block;width:300px; height:40px;position:relative;background-color:#FF8080;list-style: none; color:#fff;
-    
+    display:inline-block;width:300px; height:40px;position:relative;background-color:#FF8080;list-style: none; color:#fff;margin-right:50px;
 }
 
 .menu ul{overflow: hidden;}
@@ -182,6 +201,39 @@ div#slideshow{
     overflow: hidden;
     
 }
+
+div#slideshow:before{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:20;
+    top:45%;
+    left:-20px;
+    opacity:.2;
+    cursor:pointer;
+    border:solid transparent 20px;
+    border-right:solid #FF5555 20px;
+    transition:all .5s;
+}
+
+div#slideshow:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:45%;
+    right:-20;
+    opacity:.2;
+    cursor:pointer;
+    transition:all .5s;
+    border:solid transparent 20px;
+    border-left:solid #FF5555 20px;
+}
+
+#slideshow:hover:after, #slideshow:hover:before{
+    opacity:1;
+}
+
 
 div#slideshow section{
     padding: .5% 0;
@@ -946,4 +998,551 @@ input:focus{
 
 .btn-submit:hover{
     background-color:#7FB37F;
+}
+
+
+
+/*
+======================================================================================
+#            Média Querys                                                            #
+======================================================================================
+*/
+
+/*
+======================================================================================
+tablet-portrait: min:768px - max:1024px;
+======================================================================================
+*/
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    
+    /* Menu mobile - Escondendo menu normal e ativando menu offCanvas */
+    .menu{display:none;}
+    .menu-offCanvas{display:block;}
+    
+    /* 
+    ajustes relativos a section#HOME 
+    ajustando tamanho dos prédios*/
+    section#home:after{
+    background-size: 130% 150%;}
+    
+    /*Diminuindo margin-bottom do header do slideshow*/
+    div#slideshow section header {
+    margin-bottom: 4%;
+    }
+    /*Diminuindo tamanho da fonte no slideshow*/
+    #slideshow aside{
+    font-size:.8em;
+    }   
+
+    
+
+    
+    /* Conteudos decorativos(faixa, bilhete, etc)*/   
+    .faixa, .faixa  :nth-child(1){
+        display:block;
+        width:70%;
+        margin:auto;
+        height:auto;
+        padding-bottom:5px;
+        background-color:#FF8080;
+        position:relative;
+        z-index: 1;
+        font-size:1.1em;
+    }
+    
+    
+    .faixa :nth-child(1){
+        top:10px;
+        width:100%;
+        color:#fff;
+     }
+
+    .faixa:after{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        right:-30px;
+        border:solid #FF8080 20px;
+        border-right:solid transparent 20px;
+        border-left:solid #FF5555 20px;
+    }
+
+    .faixa:before{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        left:-30px;
+        border:solid #FF8080 20px;
+        border-left:solid transparent 20px;
+        border-right:solid #FF5555 20px;
+    }
+
+}
+
+
+/*
+======================================================================================
+small-tablet-portrait: min:600px - max:799px;
+======================================================================================
+*/
+@media screen and (min-width: 600px) and (max-width:798px) {
+
+    
+    /* Menu mobile - Escondendo menu normal e ativando menu offCanvas */
+    .menu{display:none;}
+    .menu-offCanvas{display:block;}
+    
+    /* 
+    ajustes relativos a section#HOME 
+    ajustando tamanho dos prédios*/
+    section#home:after{
+    background-size: 145% 150%;}
+    
+    /*Diminuindo margin-bottom do header do slideshow*/
+    div#slideshow section header {
+    margin-bottom: 4%;
+    }
+    /*Diminuindo tamanho da fonte no slideshow*/
+    #slideshow aside{
+    font-size:.8em;
+    }   
+
+    
+
+    
+    /* Conteudos decorativos(faixa, bilhete, etc)*/   
+    .faixa, .faixa  :nth-child(1){
+        display:block;
+        width:70%;
+        margin:auto;
+        height:auto;
+        padding-bottom:5px;
+        background-color:#FF8080;
+        position:relative;
+        z-index: 1;
+        font-size:1.1em;
+    }
+    
+    
+    .faixa :nth-child(1){
+        top:10px;
+        width:100%;
+        color:#fff;
+     }
+
+    .faixa:after{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        right:-30px;
+        border:solid #FF8080 20px;
+        border-right:solid transparent 20px;
+        border-left:solid #FF5555 20px;
+    }
+
+    .faixa:before{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        left:-30px;
+        border:solid #FF8080 20px;
+        border-left:solid transparent 20px;
+        border-right:solid #FF5555 20px;
+    }
+    
+}
+
+/*
+======================================================================================
+mobile-landscape: min:480px - max:599px;
+======================================================================================
+*/
+@media screen and (min-width:480px) and (max-width:599px){
+    
+    
+    
+    /* Menu mobile - Escondendo menu normal e ativando menu offCanvas */
+    .menu{display:none;}
+    
+    .menu-offCanvas{display:block;height:auto;}
+    
+    /* 
+    ajustes relativos a section#HOME 
+    */
+    
+    /*Diminuindo margin-bottom do header do slideshow*/
+    div#slideshow section header {
+    margin-bottom: 4%;
+    }
+    /*Diminuindo tamanho da fonte no slideshow*/
+    #slideshow aside{
+    font-size:.8em;
+    }   
+
+    
+    section#home{
+        background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+        
+    }
+    
+    #nuvens{display:none;}
+    
+    section#home:after{
+    content:'';
+    width:100%;
+    height:20%;
+    display:block;
+    position:absolute;
+    bottom:0;
+    background-image:none;
+    background-size: 102% 150%;
+    background-position: -10px -1% ;
+    background-repeat: no-repeat;
+}
+
+.outdoor{
+    color:rgba(0,0,0,.4);
+    text-align: center;
+    width:90%;/**/
+    height:80%; /**/
+    max-height:none;
+    display:inline-block;
+    position:absolute;
+    border:none;
+    border-radius:0;
+    background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+    top:50px;
+    bottom:none;/**/
+    
+    
+}
+
+
+
+
+.outdoor:before{
+    content:none;
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    
+    left:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+.outdoor:after{
+    content:none;
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    right:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+
+div#slideshow{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
+    padding-left:5%;
+    
+}
+
+div#slideshow:before{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:20;
+    top:45%;
+    left:-20px;
+    opacity:.2;
+    cursor:pointer;
+    border:solid transparent 20px;
+    border-right:solid #FF5555 20px;
+    transition:all .5s;
+}
+
+div#slideshow:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:45%;
+    right:-20;
+    opacity:.2;
+    cursor:pointer;
+    transition:all .5s;
+    border:solid transparent 20px;
+    border-left:solid #FF5555 20px;
+}
+
+#slideshow:hover:after, #slideshow:hover:before{
+    opacity:1;
+}
+
+
+div#slideshow section{
+    padding: .5% 0;
+    width:90%;
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:100%;
+    background-color: transparent;
+    transition: all 1s;
+    
+}
+
+    
+    
+
+    
+    /* Conteudos decorativos(faixa, bilhete, etc)*/   
+    .faixa, .faixa  :nth-child(1){
+        display:block;
+        width:70%;
+        margin:auto;
+        height:auto;
+        padding-bottom:5px;
+        background-color:#FF8080;
+        position:relative;
+        z-index: 1;
+        font-size:1.1em;
+    }
+    
+    
+    .faixa :nth-child(1){
+        top:10px;
+        width:100%;
+        color:#fff;
+     }
+
+    .faixa:after{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        right:-30px;
+        border:solid #FF8080 20px;
+        border-right:solid transparent 20px;
+        border-left:solid #FF5555 20px;
+    }
+
+    .faixa:before{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        left:-30px;
+        border:solid #FF8080 20px;
+        border-left:solid transparent 20px;
+        border-right:solid #FF5555 20px;
+    }
+
+    #contato{
+        display:none;
+    }
+}
+
+/*
+======================================================================================
+mobile-portrait: min:300px - max:479px;
+======================================================================================
+*/
+@media screen and (min-width:300px) and (max-width:479px){
+ 
+        
+    
+    
+    /* Menu mobile - Escondendo menu normal e ativando menu offCanvas */
+    .menu{display:none;}
+    
+    .menu-offCanvas{display:block;height:auto;}
+    
+    /* 
+    ajustes relativos a section#HOME 
+    */
+    
+    /*Diminuindo margin-bottom do header do slideshow*/
+    div#slideshow section header {
+    margin-bottom: 4%;
+    }
+    /*Diminuindo tamanho da fonte no slideshow*/
+    #slideshow aside{
+    font-size:.8em;
+    }   
+
+    
+    section#home{
+        background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+        
+    }
+    
+    #nuvens{display:none;}
+    
+    section#home:after{
+    content:'';
+    width:100%;
+    height:20%;
+    display:block;
+    position:absolute;
+    bottom:0;
+    background-image:none;
+    background-size: 102% 150%;
+    background-position: -10px -1% ;
+    background-repeat: no-repeat;
+}
+
+.outdoor{
+    color:rgba(0,0,0,.4);
+    text-align: center;
+    width:300px;/**/
+    height:80%; /**/
+    max-height:none;
+    display:inline-block;
+    position:relative;
+    border:none;
+    border-radius:0;
+    background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+    top:50px;
+    bottom:none;/**/
+    
+    
+}
+
+
+
+
+.outdoor:before{
+    content:none;
+}
+
+.outdoor:after{
+    content:none;
+}
+
+
+div#slideshow{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
+    
+    
+}
+
+div#slideshow:before{
+    content:none;
+    
+}
+
+div#slideshow:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:45%;
+    right:-20;
+    opacity:.2;
+    cursor:pointer;
+    transition:all .5s;
+    border:solid transparent 20px;
+    border-left:solid #FF5555 20px;
+}
+
+#slideshow:hover:after, #slideshow:hover:before{
+    opacity:1;
+}
+
+
+div#slideshow section{
+    padding: .5% 0;
+    width:90%;
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:100%;
+    background-color: transparent;
+    transition: all 1s;
+    
+}
+
+    
+    
+
+    
+    /* Conteudos decorativos(faixa, bilhete, etc)*/   
+    .faixa, .faixa  :nth-child(1){
+        display:block;
+        width:70%;
+        margin:auto;
+        height:auto;
+        padding-bottom:5px;
+        background-color:#FF8080;
+        position:relative;
+        z-index: 1;
+        font-size:1.1em;
+    }
+    
+    
+    .faixa :nth-child(1){
+        top:10px;
+        width:100%;
+        color:#fff;
+     }
+
+    .faixa:after{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        right:-30px;
+        border:solid #FF8080 20px;
+        border-right:solid transparent 20px;
+        border-left:solid #FF5555 20px;
+    }
+
+    .faixa:before{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        left:-30px;
+        border:solid #FF8080 20px;
+        border-left:solid transparent 20px;
+        border-right:solid #FF5555 20px;
+    }
+
+    #contato{
+        display:none;
+    }
 }
