@@ -1,0 +1,1092 @@
+*{margin:0px; padding:0px; font-family: Arial;}
+/*
+======================================================================================
+small-tablet-portrait: min:600px - max:799px;
+======================================================================================
+*/
+@media screen and (min-width: 600px) and (max-width:798px) {    
+
+
+    body{
+    width:100%;
+    height:100vh;
+    
+    }
+
+
+header#cabecalho{
+    border:solid red 0px;
+    width:600px;
+    height: 12vh;
+    min-height: 80px;
+    display:block;
+    
+    position:fixed;
+    top:0;
+    right:0;
+    z-index: 20;
+}
+
+    #cabecalho a {outline:none;text-decoration:none; color:#fff;}
+    
+/*Navegação do menu*/
+.nav-menu{position:absolute;display:inline-block;width:auto; height:100px; right:0; z-index: 0; top:0;padding-top:20px;}
+
+    .title-menu{display:none;}
+.menu-offCanvas{position:relative;right:-390px;color:#fff;font-weight:bold;transition:all 1s; display:none;}
+.menu-offCanvas ul{list-style:none; background-color:;display:block;width:auto; height:auto;overflow:hidden;}
+
+.menu-offCanvas ul:before{
+    content:"";
+    display:block;
+    border:solid transparent 20px;
+    border-right:solid #FF8080 20px;
+    float:left;
+}
+.menu-offCanvas ul li{display:inline-block;float:left; padding:10.5px 8px;background-color:#FF8080;transition:all .5s;cursor:pointer;}
+
+.menu-offCanvas:hover{
+    right:0;
+}
+
+.menu-offCanvas li:hover{
+    background-color:#FF5555;
+}
+
+
+
+.menu, .menu ul {
+    display:inline-block;width:300px; height:40px;position:relative;background-color:#FF8080;list-style: none; color:#fff;margin-right:50px;
+}
+
+.menu ul{overflow: hidden;}
+.menu li{display:inline-block; text-align: center; width:25%;height:100%; padding-top:10px; font-weight: bold;float:left; cursor:pointer;transition:all .5s;}
+.menu li:hover{background-color:#FF5555;}
+.menu:after{
+    content:'';
+    display:inline-block;
+    position:absolute;
+    right:-40px;
+    top:20px;
+    border:solid 20px #FF8080;
+    border-left:solid #FF5555 30px;
+    border-right:transparent solid 20px;
+    width:30px;
+    z-index: -1;
+}
+
+.menu:before{
+    content:'';
+    display:inline-block;
+    position:absolute;
+    left:-40px;
+    top:0px;
+    border:solid 20px transparent;
+    border-right:#FF8080 solid 20px;
+    
+    
+}
+
+
+
+
+section#home{
+    width:100%; 
+    height:100vh;
+    background-color:#80E5FF;
+    display:block;
+    position:relative;
+    overflow: hidden;
+}
+
+
+.nuvem{
+    display:inline-block;
+    width:8%;
+    min-height:20%;
+    position:absolute;
+    /*border:solid red 1px;*/
+    background-image:url('../img/nuvem.png');
+    background-size:100%;
+    background-repeat:no-repeat;
+    
+}
+
+
+
+#nuvem1{
+	top:5%;
+	left:0px;
+}
+
+
+
+#nuvem2{
+	top:25%;
+	left:0px;
+    width:15%;
+
+}
+
+#nuvem3{
+	top:50%;
+	left:900px;
+}
+
+#nuvem4{
+	top:80%;
+	left:600px;
+    width:4%;
+}	
+
+
+
+section#home:after{
+    content:'';
+    width:100%;
+    height:20%;
+    display:block;
+    position:absolute;
+    bottom:0;
+    background-image:url('../img/predio.png');
+    background-size: 102% 150%;
+    background-position: -10px -1% ;
+    background-repeat: no-repeat;
+}
+
+.outdoor{
+    color:rgba(0,0,0,.4);
+    text-align: center;
+    width:50%;
+    max-width:50%;
+    min-width:500px;
+    height:50%;
+    max-height:50%;
+    display:inline-block;
+    position:absolute;
+    border: 10px solid #ff8080;
+    border-radius: 15px;
+    background-image: linear-gradient(120deg,#ffe6d5 50%,#ffccaa 50%);
+    bottom:25%;
+    
+    
+}
+
+
+
+
+.outdoor:before{
+    content:"";
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    
+    left:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+.outdoor:after{
+    content:"";
+    width:2%;
+    height:50%;
+    bottom:-50%;
+    right:5%;
+    display:inline-block;
+    position:absolute;
+    background-color:#FF8080;
+    
+}
+
+
+div#slideshow{
+    width:100%;
+    max-width:100%;
+    min-width:500px;
+    height:100%;
+    max-height:100%;
+    position:relative;
+    overflow: hidden;
+    
+}
+
+div#slideshow:before{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:20;
+    top:45%;
+    left:-20px;
+    opacity:.2;
+    cursor:pointer;
+    border:solid transparent 20px;
+    border-right:solid #FF5555 20px;
+    transition:all .5s;
+}
+
+div#slideshow:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:45%;
+    right:-20;
+    opacity:.2;
+    cursor:pointer;
+    transition:all .5s;
+    border:solid transparent 20px;
+    border-left:solid #FF5555 20px;
+}
+
+#slideshow:hover:after, #slideshow:hover:before{
+    opacity:1;
+}
+
+
+div#slideshow section{
+    padding: .5% 0;
+    width:100%;
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:100%;
+    background-color: transparent;
+    transition: all 1s;
+    
+}
+
+/*Primeiro slide ativo*/
+div#slideshow section:last-child{left:0;}
+
+/*Estilização do primeiro slide*/
+div#slideshow section:nth-child(1) figure img{
+    width:70%;
+    max-width: 300px;
+    
+    bottom:0;
+}
+
+div#slideshow section:nth-child(3) figure img{
+   padding-top:15%;
+}
+
+div#slideshow section header{
+    display:block;
+    margin-bottom: 8%;
+}
+
+div#slideshow section aside{
+    display:block;
+    float:left;
+    width:60%;
+    height:50%;
+    
+}
+
+div#slideshow section aside p{
+    text-align: center;
+    font-size: 1.5em;
+    padding-top:6%;
+    width:100%;
+    font-weight: bold;
+    -moz-hyphens: manual;
+    hyphens: manual;
+    
+}
+
+div#slideshow section figure{
+    width:35%;
+    height:55%;
+    float:right;
+    margin-right: 2%;
+    
+}
+
+div#slideshow section figure img{
+    width:100%;
+    max-width:200px;
+}
+
+div#slideshow section footer{
+    clear:both;
+    display:block;
+    width:80%;
+    height:10%;
+    margin-left:10%;
+    
+}
+
+.ativo {left:0; opacity:0;}
+
+
+.faixa, .faixa  :nth-child(1){
+    display:block;
+    width:70%;
+    margin:auto;
+    height:40px;
+    background-color:#FF8080;
+    position:relative;
+    z-index: 1;
+}
+
+/* Classe que renderiza a faixa vermelha */
+/*  Onde o :nth-child(1) representa o conteudo que irá para dentro da faixa (qualquer tag que for usada para escrever o titulo)    */
+.faixa :nth-child(1){
+    top:10px;
+    width:100%;
+    color:#fff;
+    }
+
+.faixa:after{
+    display:inline-block;
+    content:"";
+    width:20px;
+    z-index:0 ;
+    position:absolute;
+    top:20px;
+    right:-45px;
+    border:solid #FF8080 25px;
+    border-right:solid transparent 25px;
+    border-left:solid #FF5555 25px;
+}
+
+.faixa:before{
+    display:inline-block;
+    content:"";
+    width:20px;
+    z-index:0 ;
+    position:absolute;
+    top:20px;
+    left:-45px;
+    border:solid #FF8080 25px;
+    border-left:solid transparent 25px;
+    border-right:solid #FF5555 25px;
+}
+
+ .circle{
+    position:absolute;
+    display:block;
+    width:100px;
+    height:100px;
+    border:solid red 2px;
+    background-color:#FFE6D5;
+    bottom:20px;
+    right:50px;
+    
+}
+
+
+/*
+    ====================================================
+    ==          Section Sobre mim                    ===
+    ====================================================
+*/
+
+
+section#sobremim{
+    display:block;
+    height:100vh;
+    min-height:500px;
+    width:100%;
+    background-color:#FFB380;
+    position:relative;
+    overflow: hidden;
+}
+
+/* //Mesa */
+#mesa{
+    display:block;
+    width:100%;
+    height:100%;
+    background-image:url('../img/mesa_completa2.png');
+    background-repeat: no-repeat;
+    background-size: 900px 90%;
+    background-position:0% -40%;
+    
+}
+
+/* 
+//coluna de livros  
+*/
+.livro {
+    position:absolute;
+    display: block;
+    width: 90px;
+    height: auto;
+    left: -30px;
+    bottom: 19%;
+}
+
+.livro img{
+    position:relative;
+    width:100%;
+}
+
+#coluna-esquerda{
+    bottom:19%;
+    left:58px;
+    z-index: 2;
+}
+
+#coluna-direita{
+    bottom:19%;
+    left:45%;
+    display: inline-block;
+    z-index: 1;
+}
+
+#coluna-direita::before{
+    content:open-quote "Gráficos web"close-quote; /*aqu*/
+}
+
+#coluna-esquerda::before{
+    content:open-quote "Linguagens e Frameworks"close-quote; /*aqu*/
+}
+
+/*Renderiza o bilhete amarelo acima da coluna de livros*/
+.coluna-livros::before{
+    content: "";
+    display:block;
+    position:relative;
+    font-size:.8em;
+    width:50%;
+    height:50px;
+    margin:auto;
+    padding-top:40px;
+    bottom:50px;
+    text-align: center;
+    font-weight: bold;
+    color:rgba(0,0,0,.6);
+    background-color: #FBE58E;
+    background-image: url("../img/bolinha.png");
+    background-repeat: no-repeat;
+    background-position: 50% 10% ;
+    transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    
+}
+
+
+.coluna-livros{
+    max-width:20%;
+    min-width:170px;
+    height:auto;
+    display:inline-block;
+    position:absolute;
+}
+
+
+.coluna-livros figure{
+    display:block;
+    width:100%;
+    left:0px;
+    height:auto;
+    position:relative;
+    transition:all .7s;
+    overflow: hidden;
+}
+.coluna-livros figure img{
+    width:100%;
+    left:0;
+    position:relative;
+    cursor:pointer;
+    z-index: 2;
+}
+
+/*Renderiza a caixa de informação do respectivo livro*/
+.coluna-livros figure figcaption{
+    display: block;
+    position:absolute;
+    padding:5px;
+    border-radius: 2px;
+    width:80px;
+    height:auto;
+    right:10%;
+    background-color:#FFDD55;
+    opacity:0;
+    transition: all .8s;
+    transition-delay: .2s;
+    top:-20%;
+    font-size: .7em ;
+    color:rgba(0,0,0,.6);
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.coluna-livros figure figcaption:before{
+    content:"";
+    display:block;
+    border:solid transparent 10px;
+    border-right:solid #FFDD55 10px;
+    position:absolute;
+    top:2.5px;
+    left:-19px;
+}
+
+.coluna-livros figure:hover {
+    left:30px;
+    opacity:1;
+    overflow: visible;
+}
+
+.coluna-livros figure:hover figcaption{
+    opacity:1;
+    right:-100px;
+    transition:all 1s, opacity 1.5s;
+}
+
+
+
+/*
+    ==================================================
+    # Sessão Portifólio                              #
+    ==================================================
+*/
+#portifolio{
+    width:100%;
+    min-height:460px;
+    height:100vh;
+    background-color:#ffccaa;
+    overflow:hidden;
+    position:relative;
+    
+}
+
+
+.section-title .faixa{
+    display:block; width:200px;
+} 
+
+/*
+    # Container que fica na parte superior da sessão #
+*/
+
+#portifolio-mokups{
+    width:100%;
+    height:60vh;
+    display:block;
+    position:relative;
+}
+
+#portifolio-mokups:after{
+    content:"";
+    display:block;
+    width:0;
+    margin:auto 48.5%;
+    border:solid transparent 20px;
+    border-bottom:solid #ff9955 20px;
+    position:absolute;
+    bottom:-7%;
+    z-index:0;
+}   
+
+
+#container-mokups{
+    width:600px;
+    height:auto;
+    display:block;
+    margin:3% auto 1% 20%;
+
+}
+
+#portifolio-layouts{
+    width:100%;
+    height:20vh;
+    background-color:#ff9955;
+    position:absolute;
+    bottom:0;
+    padding:5px;
+}
+
+#container-layouts{
+    width:300px;
+    height:100%;
+    display:block;
+    margin:auto;
+
+    
+}
+
+.painel-img{
+    width:150px;
+    height:100%;
+    display:block;
+    float:left;
+    margin:auto;
+    cursor: pointer;
+    position:relative;
+    top:0;
+    left:0;
+    overflow:hidden;
+    font-weight:bold;
+    z-index: 1;
+}
+
+.painel-img:before, .painel-img:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color:rgba(77,22,10,.7);
+    margin-top:200px;
+    transition:all .7s;
+    z-index:2;
+}
+
+.painel-img:after{
+    background-color:transparent;
+    border:solid #fff 5px;
+    width:80%;
+    height:80%;
+    left:5%;
+    top:5%;
+}
+
+.painel-img:hover:after, .painel-img:hover:before{
+    margin-top:0;
+    z-index: 1;
+}
+
+.painel-img:hover figcaption{
+    top:auto;
+    opacity:1;
+
+}
+.painel-img img{
+    height:100%;
+    z-index: 0;
+    position:absolute;
+}
+.painel-img figcaption{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding-top:10%;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    transition:opacity .5s;
+    transition-delay:.5s;
+    top:120%;
+    z-index: 3;
+}
+#btn-figure{display:none;}
+    
+/*Container que flutua a direita com o conteudo prévio do layout selecionado a esquerda*/
+
+.mokup-title{
+    text-align:center;
+    margin:1% auto;
+    color:#611524;
+    font-size:1.2em;
+}
+
+
+.mokup-note{
+    width:200px;
+    height:100px;
+    border:solid #14445A 12px;
+    border-radius:5% 4%;
+    position:relative;
+    display:inline-block;
+    background-color:#14445A;
+    margin:5% 10%;
+}
+            
+.mokup-note:before{
+    content:"";
+    position:absolute;
+    display:block;
+    width:3%;
+    height:5%;
+    background-color:#fff;
+    border-radius:100%;
+    top:-8px;
+    left:48%;
+                
+}
+            
+.mokup-note:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:150%;
+    height:15%;
+    background-color:#36697E;
+    bottom:-20%;
+    left:-25%;
+    border-bottom-left-radius:4% 60%;
+    border-bottom-right-radius:4% 60%;
+    background-image:url("../img/plate.png");
+    background-repeat:no-repeat;
+    background-size:20% 20%;
+    background-position: 50% 45% ;
+}
+            
+.mokup-note img{
+    width:100%;
+    height:100%;
+    border-radius:5px;
+}
+
+
+#mokup-cel{left:5%; top:0%;}
+
+.mokup-cel {
+                display:inline-block;
+                margin:auto;
+                width:50px;
+                height:100px;
+                position:relative;
+                border:solid #14445A 10px;
+                border-left:solid #14445A 6px;
+                border-right:solid #14445A 6px;
+                background-color:#14445A;
+                border-top-left-radius: 10% 5%;
+                border-top-right-radius: 10% 5%;
+                border-bottom-left-radius: 10% 5%;
+                border-bottom-right-radius: 10% 5%;
+            }
+            
+            .mokup-cel:after{
+                content:"";
+                display:block;
+                position:absolute;
+                width:60%;
+                height: 1.5%;
+                background-color:#fff;
+                border-radius:20px;
+                top:-6%;
+                left:20%;
+                
+            }
+            .mokup-cel:before{
+                content:"";
+                position:absolute;
+                display:block;
+                width:10%;
+                height:4.5%;
+                background-color:#fff;
+                bottom:-7px;
+                z-index: 2;
+                border-radius:100px;
+                left:45%;
+            }
+            
+            .mokup-cel img{
+                border-radius:4px;
+                width:100%;
+                height:100%;
+            }
+
+/*
+    estilizações decorativas (faixas, botões, titulos de sessões, ect)
+*/
+.section-title{
+    margin-top:2vh;
+    height:13vh;
+    width:100%;
+    display:block;
+    text-align:center;
+    
+}
+
+.section-title h3{
+    margin-top:15%;
+    color:rgba(0,0,0,.6);
+}
+
+
+
+.btn-raid{
+    outline: none;
+    text-decoration: none;
+    display:block;
+    padding:10px;
+    width:80px;
+    margin:auto;
+    border-radius:20px;
+    text-align: center;
+    position:relative;
+    z-index: 2;
+    background-color:#FF8080;
+    color:#fff;
+    font-weight: bold;
+    cursor:pointer;
+    transition:all .7s;
+}
+
+.btn-raid:nth-child(1){
+    z-index:1;
+}
+
+.btn-raid:hover{background-color:#FF5555;}
+.btn-raid:after{
+    content:"";
+    width:90%;
+    left:4%;
+    height:80%;
+    position:absolute;
+    top:7%;
+    z-index: 0;
+    border:solid #FFB380 1px;
+    border-radius:20px;
+}
+
+
+/*
+    ==================================================
+    # Sessão de Contato                              #
+    ==================================================
+*/
+
+
+#contato {
+    width:100%;
+    height:100vh;
+    display:block;
+    background-color:#FFCCAA;
+	overflow:hidden;
+}
+#contato .section-title{height:auto;margin-bottom:20px;}
+
+#contato .left-container{
+    width:250px;
+    height:100vh;
+    float:left;
+    background-color:#FFB380;
+    position:relative;
+}
+#contato .right-container{
+    
+    float:right;
+    width:40%;
+    height:100vh;
+    float:right;
+    display:block;
+    position:relative;
+}
+
+#contato .right-container:after{
+    content:"";
+    width:100%;
+    height:130px;
+    position:absolute;
+    bottom:0;
+    background-image:url("../img/predio1.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:5px 0px;
+}
+
+    #contato .right-container .section-title{ 
+        
+        display:none;
+    }    
+    
+    
+#contato .right-container .balao{
+    position:absolute;
+    bottom:200px;
+}
+
+.contato-form{
+    width:100%;
+    height:auto;
+    position:absolute;
+    bottom:3%;
+}
+
+.contato-form:before{
+    content:"Mande uma mensagem :D";
+    width:100%;
+    height:auto;
+    font-size:1.2em;
+    padding-bottom:30px;
+    font-weight:bold;
+    color:rgba(0,0,0,.7);
+    text-align:center;
+    display:block;
+    
+}
+
+.contato-form input, .contato-form textarea{
+    width:95%;
+    display:block;
+    margin:2% auto;
+    padding:15px 5px;
+    border:solid transparent 2px;
+    border-radius:5px;
+    border-radius:;
+}
+
+
+
+.balao{
+    width:250px;
+    height:auto;
+    padding:5px 20px 25px 20px;
+    border-radius:20px;
+	left:-60px;
+    background-color:#fff;
+    position:relative;
+}
+
+
+.balao h3{
+    margin:30px auto;
+    text-align:center;
+}
+
+.balao:after {
+    content:"";
+    position:absolute;
+    width:40px;
+    height:40px;
+    transform: rotate(30deg);;
+    bottom:-10px;
+    right:50%;
+    background-image:url("../img/ponta.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.balao:before{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    bottom:-110px;
+    right:20%;
+    background-image:url("../img/char-megafone.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+.list-icon{
+    list-style:none;
+    font-weight:bold;
+    color:rgba(0,0,0,.6);
+}
+.list-icon li{
+    margin-top:5px;
+    position:relative;
+    
+}
+
+.list-icon li  img{
+    width:20px;
+    height:auto;
+    position:relative;
+    top:5px;
+    left:-5px;
+}
+
+
+
+.btn-submit{
+   background-color:#D7F4D7;
+   width:95%;
+   display:block;
+   margin:2% auto;
+   padding:5% 0%;
+   font-weight:bold;
+   border-radius:5px;
+   text-align:center; 
+   font-size:1em;
+   cursor:pointer; 
+   color: #005500;
+   outline:0;
+   transition:all .5s;
+}
+
+input:focus{
+    outline:0;
+}
+.btn-submit:focus{
+    outline:none;
+}
+
+.btn-submit:hover{
+    background-color:#7FB37F;
+}
+
+ 
+    
+    /* Menu mobile - Escondendo menu normal e ativando menu offCanvas */
+    .menu{display:none;}
+    .menu-offCanvas{display:block;}
+    
+    /* 
+    ajustes relativos a section#HOME 
+    ajustando tamanho dos prédios*/
+    section#home:after{
+    background-size: 140% 150%;}
+    
+    /*Diminuindo margin-bottom do header do slideshow*/
+    div#slideshow section header {
+    margin-bottom: 4%;
+    }
+    /*Diminuindo tamanho da fonte no slideshow*/
+    #slideshow aside{
+    font-size:.8em;
+    }   
+
+    
+
+    
+    /* Conteudos decorativos(faixa, bilhete, etc)*/   
+    .faixa, .faixa  :nth-child(1){
+        display:block;
+        width:70%;
+        margin:auto;
+        height:auto;
+        padding-bottom:5px;
+        background-color:#FF8080;
+        position:relative;
+        z-index: 1;
+        font-size:1.1em;
+    }
+    
+    
+    .faixa :nth-child(1){
+        top:10px;
+        width:100%;
+        color:#fff;
+     }
+
+    .faixa:after{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        right:-30px;
+        border:solid #FF8080 20px;
+        border-right:solid transparent 20px;
+        border-left:solid #FF5555 20px;
+    }
+
+    .faixa:before{
+        display:inline-block;
+        content:"";
+        width:10px;
+        z-index:0 ;
+        position:absolute;
+        top:15px;
+        left:-30px;
+        border:solid #FF8080 20px;
+        border-left:solid transparent 20px;
+        border-right:solid #FF5555 20px;
+    }
+    
+}

@@ -40,7 +40,7 @@ window.onload = function(){
                nuvem4.mover(-100, 400);
                     
                
-                    telaR.innerHTML = "Largura: "+(document.body.clientWidth -10);
+                    telaR.innerHTML = "Largura: "+(window.innerWidth)+" Altura: "+(window.innerHeight);
             }
 
             setInterval(update,16);

@@ -2,7 +2,13 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <link rel='stylesheet' type='text/css' href='css/style.css'>
+        <meta name="viewport" content="width=device-width, intial scale=1">
+        <link rel='stylesheet' media="screen and (min-width: 1024px)" type='text/css' href='css/style.css'>
+        <link rel='stylesheet' media="screen and (min-width: 768px) and (max-width: 1024px)" type='text/css' href='css/768_1024.css'>
+        <link rel='stylesheet' media="screen and (min-width: 600px) and (max-width: 769px)" type='text/css' href='css/600_769.css'>
+        <link rel='stylesheet' media="screen and (min-width: 480px) and (max-width: 599px)" type='text/css' href='css/480_599.css'>
+        <link rel='stylesheet' media="screen and (min-width: 300px) and (max-width: 479px)"  type='text/css' href='css/300_479.css'>
+        
         <style>
             
         </style>
@@ -11,26 +17,29 @@
         <header id='cabecalho'>
             <!-- Menu de navegação-->
             <nav class='nav-menu'>
-                <span id="resolution">dsd</span>
-                
                 <span class="menu-offCanvas">
-                    <ul class="">
-                        <li>Menu</li>
-                        <li>Home</li>
-                        <li>Portifolio</li>
-                        <li>Sobre Mim</li>
-                        <li>Contato</li>
-                    </ul>
+                    <span class="title-menu">MENU</span>
+                             <ul>
+                                 <li class="item-off">Menu</li>
+                                 <a href="#sobremim"><li>Sobre Mim</li></a>
+                                 <a href="#sobremim"><li>Conhecimentos</li></a>
+                                 <a href="#portifolio"><li>Portifolio</li></a>
+                                 <a href="#contato"><li>Contato</li></a>
+                            </ul>
                 </span>
-                
                 <span class='menu'>
                     <ul>
-                        <li>Home</li>
-                        <li>Portifolio</li>
-                        <li>Contato</li>
+                        <a href="#sobremim"><li>Sobre mim
+                            <ol>
+                                <a href="#sobremim"><li>Conhecimentos</li></a>
+                            </ol>
+                        </li></a>
+                        <a href="#portifolio" ><li>Portifolio</li></a>
+                        <a href="#contato"><li>Contato</li></a>
                     </ul>
                 </span>        
             </nav>
+            <span id="resolution">dsd</span>
         </header>
         <main>
             
@@ -64,7 +73,7 @@
                             <h2>Entre em contato</h2>
                         </header>
                         <aside>
-                            <p>Clique <a href='#'>aqui</a> e entre em contato!</p>
+                            <p>Clique <a href='#contato'>aqui</a> e entre em contato!</p>
                         </aside>
                         <figure>
                         </figure>
@@ -86,7 +95,7 @@
                             <img src='http://www.keniwd.16mb.com/img/pc_cel.png'>
                         </figure>
                         <footer>
-                            <p>confira meu <a href="#">portifolio</a></p>
+                            <p>confira meu <a href="#portifolio">portifolio</a></p>
                         </footer>
                     </section>
                 </div>    
@@ -197,6 +206,7 @@
                             <a href="file:///home/mauro/projetos/PizzaTop/public_html/index.html"></a>
                             <figcaption>
                                 Pizzatop
+                                <a target="_blank" href="file:///home/mauro/projetos/PizzaTop/public_html/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
                             </figcaption>
                         </figure>
                         <figure class="painel-img ">
@@ -204,6 +214,7 @@
                             <a href="file:///home/mauro/projetos/photogrid/index.html"></a>
                             <figcaption>
                                 Photogrid
+                                <a target="_blank" href="file:///home/mauro/projetos/photogrid/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
                             </figcaption>
                         </figure>
                         
@@ -212,6 +223,19 @@
             </section>
             <!-- Sessão de contato -->
             <section id="contato">
+                <div class="right-container">
+                    <header class="section-title faixa">
+                        <h2>Contato</h2></header>
+                    <div class="balao">
+                        <ul class="list-icon">
+                            <h3>Entre em contato via e-mail, telefone/whatsapp.</h3>
+                            <li><img src="img/zap.png">(31) 8602-6528</li>
+                            <li><img src="img/email.png">maurosilva.aj@gmail.com</li>
+                            <li><img src="img/email.png">contato@mauroweb.com.br</li>
+                        </ul> 
+                    </div>
+                </div>
+                
                 <aside class="left-container">
                     <header class="section-title">
                         <span class="faixa"><h2>Contato</h2></span>
@@ -226,17 +250,7 @@
                     </form>
                 </aside>
                 
-                <div class="right-container">
-                    <header class="section-title"></header>
-                    <div class="balao">
-                        <ul class="list-icon">
-                            <h3>Entre em contato via e-mail, telefone/whatsapp.</h3>
-                            <li><img src="img/zap.png">(31) 8602-6528</li>
-                            <li><img src="img/email.png">maurosilva.aj@gmail.com</li>
-                            <li><img src="img/email.png">contato@mauroweb.com.br</li>
-                        </ul> 
-                    </div>
-                </div>
+                
             </section>
         </main>
         <footer>
