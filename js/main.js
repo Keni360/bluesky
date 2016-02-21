@@ -170,15 +170,67 @@ window.onload = function(){
         
         
         
-        /*
-                FOrmulario de contato
-        */
+   /*================================================
+    *   Formulário de contato
+    * ===============================================
+    */
         
         var btn = document.querySelector(".btn-submit");
+        var nome = document.forms["contato"]["nome"];
+        var email = document.forms["contato"]["email"];
+        var msg = document.forms["contato"]["msg"];
+        var validation = false;
+        var validationMsg = "Por favor, preencha corretamente os campos em vermelho"
+        var formMail = document.querySelector("#formContato");
         
         btn.addEventListener("click",function(e){
-                e.preventDefault();
-                alert("clicou");
+                  e.preventDefault();
+                  if(nome.value == null || nome.value == ""){
+                          
+                          //alert("Por favor preencha o campo nome");
+                                nome.style.boxShadow = "rgba(255,0,0,.5) 0px 0px 10px";
+                                nome.style.border = "solid red 1px";
+                                validation = false;
+                        }else{
+                                nome.style.border = "transparent solid";
+                                nome.style.boxShadow = "none";
+                                validation = true;
+                        }
+                                
+                        if(email.value.match("@")){
+                                
+                                email.style.border = "transparent solid";
+                                email.style.boxShadow = "none";
+                                validation = true;
+                        }else{
+                                //alert("Por favor, preencha o campo email corretamente");
+                                email.style.boxShadow = "rgba(255,0,0,.5) 0px 0px 10px";
+                                email.style.border = "solid red 1px";
+                                validation = false;
+                        }
+                
+                        
+                        if(msg.value == null || msg.value == ""){
+                          
+                          //alert("Por favor preencha o campo nome");
+                                msg.style.boxShadow = "rgba(255,0,0,.5) 0px 0px 10px";
+                                msg.style.border = "solid red 1px";
+                                validation = false;
+                        }else{
+                                msg.style.border = "transparent solid";
+                                msg.style.boxShadow = "none";
+                                validation = true;
+                        }
+                        
+                        
+                        if(validation){
+                                alert("Email enviado com sucesso");
+                                formMail.submit();
+                                formMail.reset();
+                        }else{
+                               alert(validationMsg);
+                        }
+                        
         },false);
         
     }   

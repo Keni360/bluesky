@@ -21,7 +21,6 @@
                     <span class="title-menu">MENU</span>
                              <ul>
                                  <li class="item-off">Menu</li>
-                                 <a href="#sobremim"><li>Sobre Mim</li></a>
                                  <a href="#sobremim"><li>Conhecimentos</li></a>
                                  <a href="#portifolio"><li>Portifolio</li></a>
                                  <a href="#contato"><li>Contato</li></a>
@@ -29,11 +28,7 @@
                 </span>
                 <span class='menu'>
                     <ul>
-                        <a href="#sobremim"><li>Sobre mim
-                            <ol>
-                                <a href="#sobremim"><li>Conhecimentos</li></a>
-                            </ol>
-                        </li></a>
+                        <a href="#sobremim"><li>Conhecimentos</li></a>
                         <a href="#portifolio" ><li>Portifolio</li></a>
                         <a href="#contato"><li>Contato</li></a>
                     </ul>
@@ -105,7 +100,8 @@
             <!-- // Sobre MIM -->
             <section id="sobremim">
                 <header class="section-title">
-                    <span class="faixa">                 <h2>Conhecimento</h2>
+                    <span class="faixa">
+                        <h2>Conhecimento</h2>
                     </span>
                 </header>
                     <!-- //Background da mesa -->
@@ -241,12 +237,13 @@
                         <span class="faixa"><h2>Contato</h2></span>
                     </header>
                     
-                    <form class="contato-form">
-                        <input placeholder="NOME">
-                        <input placeholder="E-mail">
-                        <input placeholder="Telefone">
-                        <textarea placeholder="Digite aqui a sua mensagem"></textarea>
-                        <span class="btn-submit">Enviar</span>
+                    <form name="contato" action="email.php" id="formContato" class="contato-form" method="POST">
+                        <input type="text" id="nome" name="nome" placeholder="NOME" >
+                        <input type="email" id="email" name="email" placeholder="E-mail" >
+                        <input type="tel" name="telefone" placeholder="Telefone" required="">
+                        <textarea name="msg" placeholder="Digite aqui a sua mensagem" required=""></textarea>
+                        <span id="enviarEmail" class="btn-submit">Enviar</span>
+                        
                     </form>
                 </aside>
                 
