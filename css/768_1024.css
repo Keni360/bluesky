@@ -1,4 +1,13 @@
 *{margin:0px; padding:0px; font-family: Arial;}
+.container{
+	display:block;
+	width:100%;
+    max-width:100%;
+	position:relative;
+	height:auto;
+	min-height:450px;
+}
+
 
 /*
 ======================================================================================
@@ -32,7 +41,7 @@ header#cabecalho{
 .nav-menu{position:absolute;display:inline-block;width:auto; height:100px; right:0; z-index: 0; top:0;padding-top:20px;}
 
 .title-menu{display:none;}
-.menu-offCanvas{position:relative;right:-390px;color:#fff;font-weight:bold;transition:all 1s; display:none;}
+.menu-offCanvas{width:auto;position:relative;right:-360px;color:#fff;font-weight:bold;transition:all 1s; display:block;}
 .menu-offCanvas ul{list-style:none; background-color:;display:block;width:auto; height:auto;overflow:hidden;}
 
 .menu-offCanvas ul:before{
@@ -92,6 +101,8 @@ header#cabecalho{
 section#home{
     width:100%; 
     height:100vh;
+    min-height:400px;
+    max-height:800px;
     background-color:#80E5FF;
     display:block;
     position:relative;
@@ -211,37 +222,7 @@ div#slideshow{
     
 }
 
-div#slideshow:before{
-    content:"";
-    display:block;
-    position:absolute;
-    z-index:20;
-    top:45%;
-    left:-20px;
-    opacity:.2;
-    cursor:pointer;
-    border:solid transparent 20px;
-    border-right:solid #FF5555 20px;
-    transition:all .5s;
-}
 
-div#slideshow:after{
-    content:"";
-    display:block;
-    position:absolute;
-    z-index:100;
-    top:45%;
-    right:-20;
-    opacity:.2;
-    cursor:pointer;
-    transition:all .5s;
-    border:solid transparent 20px;
-    border-left:solid #FF5555 20px;
-}
-
-#slideshow:hover:after, #slideshow:hover:before{
-    opacity:1;
-}
 
 
 div#slideshow section{
@@ -388,6 +369,7 @@ div#slideshow section footer{
 section#sobremim{
     display:block;
     height:100vh;
+    min-height:600px;
     width:100%;
     background-color:#FFB380;
     position:relative;
@@ -403,6 +385,7 @@ section#sobremim{
     background-repeat: no-repeat;
     background-size: 900px 90%;
     background-position:0% -40%;
+    position:relative;
     
 }
 
@@ -416,7 +399,7 @@ section#sobremim{
     width: 120px;
     height: auto;
     left: -30px;
-    bottom: 19%;
+    bottom: 34%;
 }
 
 .livro img{
@@ -425,13 +408,15 @@ section#sobremim{
 }
 
 #coluna-esquerda{
-    bottom:19%;
+    bottom:34%;
     left:80px;
     z-index: 2;
+    position:absolute;
 }
 
 #coluna-direita{
-    bottom:19%;
+    bottom:34%;
+    position:absolute;
     left:400px;
     display: inline-block;
     z-index: 1;
@@ -546,30 +531,36 @@ section#sobremim{
 */
 #portifolio{
     width:100%;
-    min-height:100vh;
+    max-width:100%;
+    min-height:200px;
     background-color:#ffccaa;
+    display:block;
     overflow:hidden;
     position:relative;
     
 }
+    
+    #portifolio .container{
+		height:auto;
+		
+		
+	}
 
 
 .section-title .faixa{
     display:block; width:200px;
 } 
 
-/*
-    # Container que fica na parte superior da sessão #
-*/
+/* # Container que fica na parte superior da sessão # */
 
 #portifolio-mokups{
     width:100%;
-    height:60vh;
+    min-height:420px;
     display:block;
     position:relative;
 }
 
-#portifolio-mokups:after{
+#portifolio-layouts:after{
     content:"";
     display:block;
     width:0;
@@ -577,24 +568,26 @@ section#sobremim{
     border:solid transparent 20px;
     border-bottom:solid #ff9955 20px;
     position:absolute;
-    bottom:-7%;
+    top:-40px;
     z-index:0;
 }   
 
 
 #container-mokups{
     width:600px;
-    height:auto;
+    min-height:100px;
     display:block;
-    margin:3% auto 1% 20%;
+    margin:10px auto 5px auto;
 
 }
 
 #portifolio-layouts{
     width:100%;
     height:20vh;
+    min-height:120px;
     background-color:#ff9955;
     position:absolute;
+    margin:auto;
     bottom:0;
     padding:5px;
 }
@@ -848,15 +841,20 @@ section#sobremim{
 
 #contato {
     width:100%;
-    height:100vh;
+    height:auto;
+    min-height:500px;
     display:block;
-    background-color:#FFCCAA;
+    background-color:#FFCCAA;    
 }
+    
+    #contato .container{
+    padding-top:0;
+    }    
 #contato .section-title{height:auto;margin-bottom:20px;}
 
 #contato .left-container{
     width:300px;
-    height:100vh;
+    min-height:500px;
     float:left;
     background-color:#FFB380;
     position:relative;
@@ -865,7 +863,7 @@ section#sobremim{
     
     float:right;
     width:60%;
-    height:100vh;
+    min-height:500px;
     float:right;
     display:block;
     position:relative;
@@ -1024,7 +1022,8 @@ input:focus{
     ajustes relativos a section#HOME 
     ajustando tamanho dos prédios*/
     section#home:after{
-    background-size: 130% 150%;}
+        background-size: 130% 150%;
+    }
     
     /*Diminuindo margin-bottom do header do slideshow*/
     div#slideshow section header {
@@ -1084,5 +1083,12 @@ input:focus{
         border-right:solid #FF5555 20px;
     }
 
+	.footer-page{
+        text-align:center; 
+        margin-top:5px; 
+        color:rgba(0,0,0,.8);
+        font-size:.7em; 
+        font-weight:bold;
+    }
 }
 

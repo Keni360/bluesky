@@ -21,6 +21,7 @@
                     <span class="title-menu">MENU</span>
                              <ul>
                                  <li class="item-off">Menu</li>
+                                 <a href="#home"><li>Home</li></a>
                                  <a href="#sobremim"><li>Conhecimentos</li></a>
                                  <a href="#portifolio"><li>Portifolio</li></a>
                                  <a href="#contato"><li>Contato</li></a>
@@ -34,7 +35,7 @@
                     </ul>
                 </span>        
             </nav>
-            <span style="display:none" id="resolution">dsd</span>
+            <span style="display:none;" id="resolution">dsd</span>
         </header>
         <main>
             
@@ -68,7 +69,11 @@
                             <h2>Entre em contato</h2>
                         </header>
                         <aside>
-                            <p>Clique <a href='#contato'>aqui</a> e entre em contato!</p>
+                            <ul class="list-icon">
+                                <li><img src="img/zap.png">(31) 8602-6528</li>
+                                <li><img src="img/email.png">maurosilva.aj@gmail.com</li>
+                                <li><img src="img/email.png">contato@mauroweb.com.br</li>
+                            </ul> 
                         </aside>
                         <figure>
                         </figure>
@@ -106,7 +111,7 @@
                 </header>
                     <!-- //Background da mesa -->
                     <span id="mesa">
-                    </span>
+                    
                 <figure class='livro'>
                     <img src='img/git-mysql.png'>
                 </figure>
@@ -174,81 +179,89 @@
                                 </figcaption>
                             </figure>
                         </section>
+                        </span>
             </section>
             
             <!-- Sessão de portifolio -->
             <section id="portifolio">
-                <header class="section-title">
-                    <span class="faixa">
-                        <h2>Portifolio</h2>
-                    </span>
-                </header>
-                <section id="portifolio-mokups">
-                    <span id="container-mokups">
-                        <figure class="mokup-note">
-                            <img src="img/pizzatop.png">
-                        </figure>
-                        <figure class="mokup-cel">
-                            <img src="img/pizzatop-mobile.png">
-                        </figure>
-                    </span>
-                    <a class="btn-raid" target="_blank" href="#portifolio" id="btnLink">Demo</a>
-                </section>
-                
-                <section id="portifolio-layouts">
-                    <span id="container-layouts">
-                        <figure class="painel-img">
-                            <img src="img/pizzatop.png" alt="pizzatop">
-                            <a href="file:///home/mauro/projetos/PizzaTop/public_html/index.html"></a>
-                            <figcaption>
-                                Pizzatop
-                                <a target="_blank" href="file:///home/mauro/projetos/PizzaTop/public_html/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
-                            </figcaption>
-                        </figure>
-                        <figure class="painel-img ">
-                            <img src="img/photogrid.png" alt="photogrid">
-                            <a href="file:///home/mauro/projetos/photogrid/index.html"></a>
-                            <figcaption>
-                                Photogrid
-                                <a target="_blank" href="file:///home/mauro/projetos/photogrid/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
-                            </figcaption>
-                        </figure>
-                        
-                    </span>
-                </section>
+                <span class="container" >
+                    <header class="section-title">
+                        <span class="faixa">
+                            <h2>Portifolio</h2>
+                        </span>
+                    </header>
+                    <section id="portifolio-mokups">
+                        <span id="container-mokups">
+                            <figure class="mokup-note">
+                                <img src="img/pizzatop.png">
+                            </figure>
+                            <figure class="mokup-cel">
+                                <img src="img/pizzatop-mobile.png">
+                            </figure>
+                        </span>
+                        <a class="btn-raid" target="_blank" href="#portifolio" id="btnLink">Demo</a>
+                    </section>
+
+                    <section id="portifolio-layouts">
+                        <span id="container-layouts">
+                            <figure class="painel-img">
+                                <img src="img/pizzatop.png" alt="pizzatop">
+                                <a href="file:///home/mauro/projetos/PizzaTop/public_html/index.html"></a>
+                                <figcaption>
+                                    Pizzatop
+                                    <a target="_blank" href="file:///home/mauro/projetos/PizzaTop/public_html/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
+                                </figcaption>
+                            </figure>
+                            <figure class="painel-img ">
+                                <img src="img/photogrid.png" alt="photogrid">
+                                <a href="file:///home/mauro/projetos/photogrid/index.html"></a>
+                                <figcaption>
+                                    Photogrid
+                                    <a target="_blank" href="file:///home/mauro/projetos/photogrid/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
+                                </figcaption>
+                            </figure>
+
+                        </span>
+                    </section>
+                </span>
             </section>
             <!-- Sessão de contato -->
             <section id="contato">
-                <div class="right-container">
-                    <header class="section-title faixa">
-                        <h2>Contato</h2></header>
-                    <div class="balao">
-                        <ul class="list-icon">
-                            <h3>Entre em contato via e-mail, telefone/whatsapp.</h3>
-                            <li><img src="img/zap.png">(31) 8602-6528</li>
-                            <li><img src="img/email.png">maurosilva.aj@gmail.com</li>
-                            <li><img src="img/email.png">contato@mauroweb.com.br</li>
-                        </ul> 
+                <span class="container">
+                    <div class="right-container">
+                        <header class="section-title faixa">
+                            <h2>Contato</h2></header>
+                        <div class="balao">
+                            <ul class="list-icon">
+                                <h3>Entre em contato via e-mail, telefone/whatsapp.</h3>
+                                <li><img src="img/zap.png">(31) 8602-6528</li>
+                                <li><img src="img/email.png">maurosilva.aj@gmail.com</li>
+                                <li><img src="img/email.png">contato@mauroweb.com.br</li>
+                            </ul> 
+                        </div>
                     </div>
-                </div>
-                
-                <aside class="left-container">
-                    <header class="section-title">
-                        <span class="faixa"><h2>Contato</h2></span>
-                    </header>
-                    <form name="contato" action="email.php" id="formContato" class="contato-form" method="POST">
-                        <input type="text" id="nome" name="nome" placeholder="NOME" >
-                        <input type="email" id="email" name="email" placeholder="E-mail" >
-                        <input type="tel" name="telefone" placeholder="Telefone" required="">
-                        <textarea name="msg" placeholder="Digite aqui a sua mensagem" required=""></textarea>
-                        <span id="enviarEmail" class="btn-submit">Enviar</span>
-                    </form>
-                </aside>
-                
-                
+
+                    <aside class="left-container">
+                        <header class="section-title">
+                            <span class="faixa"><h2>Contato</h2></span>
+                        </header>
+                        <form name="contato" action="email.php" id="formContato" class="contato-form" method="POST">
+                            <input type="text" id="nome" name="nome" placeholder="NOME" >
+                            <input type="email" id="email" name="email" placeholder="E-mail" >
+                            <input type="tel" name="telefone" placeholder="Telefone" required="">
+                            <textarea name="msg" placeholder="Digite aqui a sua mensagem" required=""></textarea>
+                            <span id="enviarEmail" class="btn-submit">Enviar</span>
+                            <p class="footer-page" >
+                            by Mauro Vieira<br> 2016
+                               
+                        </p>
+                        </form>
+                    </aside>
+                </span>
             </section>
         </main>
         <footer>
+            
         </footer>
     </body>
     <script type='text/javascript' src='js/main.js'>
