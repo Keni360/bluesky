@@ -412,7 +412,10 @@ monitores widescreen: min:1024px
 		background-color:#FFB380;
 		overflow: hidden;
 	}
-
+	section#sobremim .container{
+		max-width:1300px;
+		margin:auto;
+	}
 	/* //Mesa */
 	#mesa{
 		display:block;
@@ -432,22 +435,22 @@ monitores widescreen: min:1024px
 	.livro {
 		position:absolute;
 		display: block;
-		width: 13%;
+		width: 15px;
 		min-width: 120px;
 		height: auto;
-		left: -1.3%;
+		left:.1%;
 		bottom: 34%;
 		position:absolute;
 	}
 
-	.livro img{
+	.livro img, .livro figure span{
 		position:relative;
 		width:100%;
 	}
 
 	#coluna-esquerda{
 		bottom:34%;
-		left:10%;
+		left:120px;
 		z-index: 2;
 		position:absolute
 	}
@@ -494,8 +497,8 @@ monitores widescreen: min:1024px
 
 
 	.coluna-livros{
-		max-width:20%;
-		min-width:200px;
+		max-width:280px;
+		width:240px;
 		height:auto;
 		display:inline-block;
 		position:absolute;
@@ -511,8 +514,9 @@ monitores widescreen: min:1024px
 		transition:all .7s;
 		overflow: hidden;
 	}
-	.coluna-livros figure img{
+	.coluna-livros figure img, coluna-livros figure span{
 		width:100%;
+		height:32px;
 		left:0;
 		position:relative;
 		cursor:pointer;

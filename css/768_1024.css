@@ -8,6 +8,56 @@
 	min-height:450px;
 }
 
+.sprite-livro{
+	width:100%;
+	height:28px;
+	background-image:url("../img/livros.png");
+	background-size:100% 1000%;
+	display:block;
+	z-index:1;
+	position:relative;
+	
+}
+.sprite-livro-bootstrap{
+	background-position:0% 0px;
+}
+
+.sprite-livro-html{
+	background-position:0% -64px;
+}
+
+.sprite-livro-css{
+	background-position:0% -96px;
+}
+
+.sprite-livro-php{
+	background-position:0% -32px;
+}
+
+.sprite-livro-javascript{
+	background-position:0% -128px;
+}
+
+.sprite-livro-jquery{
+	background-position:0% -160px;
+}
+
+.sprite-livro-gimp{
+	background-position:0% -192px;
+}
+
+.sprite-livro-photoshop{
+	background-position:0% -224px;
+}
+
+.sprite-livro-inkscape{
+	background-position:0% -256px;
+}
+
+.sprite-livro-corel{
+	background-position:0% -288px;
+}
+
 
 /*
 ======================================================================================
@@ -398,7 +448,7 @@ section#sobremim{
     display: block;
     width: 120px;
     height: auto;
-    left: -30px;
+    left: -40px;
     bottom: 34%;
 }
 
@@ -456,8 +506,8 @@ section#sobremim{
 
 
 .coluna-livros{
-    max-width:20%;
-    min-width:200px;
+    
+    min-width:230px;
     height:auto;
     display:inline-block;
     position:absolute;
@@ -466,15 +516,16 @@ section#sobremim{
 
 .coluna-livros figure{
     display:block;
+	height:32px;
     width:100%;
     left:0px;
-    height:auto;
     position:relative;
     transition:all .7s;
     overflow: hidden;
 }
-.coluna-livros figure img{
+.coluna-livros figure img, .coluna-livros figure span{
     width:100%;
+	height:100%;
     left:0;
     position:relative;
     cursor:pointer;

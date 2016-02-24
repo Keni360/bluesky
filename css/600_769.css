@@ -375,8 +375,13 @@ section#sobremim{
     overflow: hidden;
 }
     
-    #sobremim .container{
-        position:absolute;
+    section#sobremim .container{
+        position:relative;
+		display:block;
+		border:solid green 1px;
+		height:100%;
+		margin:auto;
+		position:bottom;
     }
 
 /* //Mesa */
@@ -398,9 +403,9 @@ section#sobremim{
 .livro {
     position:absolute;
     display: block;
-    width: 90px;
+    width: 100px;
     height: auto;
-    left: -30px;
+    left: -40px;
     bottom: 34%;
 }
 
@@ -457,7 +462,7 @@ section#sobremim{
 
 .coluna-livros{
     max-width:20%;
-    min-width:170px;
+    min-width:200px;
     height:auto;
     display:inline-block;
     position:absolute;
