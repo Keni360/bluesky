@@ -378,7 +378,6 @@ section#sobremim{
     section#sobremim .container{
         position:relative;
 		display:block;
-		border:solid green 1px;
 		height:100%;
 		margin:auto;
 		position:bottom;
@@ -494,12 +493,11 @@ section#sobremim{
     border-radius: 2px;
     width:80px;
     height:auto;
-    right:10%;
+    right:-120px;
     background-color:#FFDD55;
     opacity:0;
-    transition: all .8s;
-    transition-delay: .2s;
-    top:-20%;
+    transition: all .5s;
+    top:10%;
     font-size: .7em ;
     color:rgba(0,0,0,.6);
     text-align: left;
@@ -518,10 +516,17 @@ section#sobremim{
 }
 
 .coluna-livros figure:hover {
-    left:30px;
+    left:10px;
     opacity:1;
     overflow: visible;
 }
+
+.coluna-livros:hover figure figcaption, .coluna-livros:hover figure{
+        
+        overflow: visible;
+        opacity:1;
+}
+    
 
 .coluna-livros figure:hover figcaption{
     opacity:1;

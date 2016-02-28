@@ -1,7 +1,7 @@
 window.onload = function(){
     
         var teste = document.querySelector('#nuvens');
-        var telaR = document.querySelector("#resolution");     
+        //var telaR = document.querySelector("#resolution");     
     
             //Classe nuvem
             var nuvem = function(id){
@@ -40,7 +40,7 @@ window.onload = function(){
                nuvem4.mover(-100, 400);
                     
                
-                    telaR.innerHTML = "Largura: "+(window.innerWidth)+" Altura: "+(window.innerHeight);
+                    //telaR.innerHTML = "Largura: "+(window.innerWidth)+" Altura: "+(window.innerHeight);
             }
 
             setInterval(update,16);
@@ -232,5 +232,18 @@ window.onload = function(){
                         }
                         
         },false);
+        
+   /*================================================
+    *   Scroll suave
+    * ===============================================
+    */  
+  jQuery(document).ready(function($) { 
+    $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+   });
+   
+});
+
         
     }   

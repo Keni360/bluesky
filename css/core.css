@@ -6,8 +6,9 @@
 	display:block;
 	z-index:1;
 	position:relative;
-	
+	cursor:pointer;	
 }
+
 .sprite-livro-bootstrap{
 	background-position:0% 0px;
 }

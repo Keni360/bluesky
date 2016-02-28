@@ -512,7 +512,9 @@ monitores widescreen: min:1024px
 		height:auto;
 		position:relative;
 		transition:all .7s;
-		overflow: hidden;
+        overflow: hidden;
+
+		
 	}
 	.coluna-livros figure img, coluna-livros figure span{
 		width:100%;
@@ -527,13 +529,13 @@ monitores widescreen: min:1024px
 	.coluna-livros figure figcaption{
 		display: block;
 		position:absolute;
-		padding: 10px 5px;
+		padding: 8px 5px;
 		border-radius: 2px;
 		width:100px;
 		height:auto;
-		right:10%;
+		right:-150px;
 		background-color:#FFDD55;
-		opacity:0;
+		opacity:1;
 		transition: all .8s;
 		transition-delay: .2s;
 		top:3px;
@@ -541,6 +543,9 @@ monitores widescreen: min:1024px
 		color:rgba(0,0,0,.6);
 		text-align: center;
 		font-weight: bold;
+        cursor:pointer;
+        opacity:0;
+        transition:all .8s;
 	}
 
 
@@ -552,18 +557,25 @@ monitores widescreen: min:1024px
 		position:absolute;
 		top:7px;
 		left:-19px;
+        cursor:pointer;
 	}
 
+    .coluna-livros:hover figure figcaption, .coluna-livros:hover figure{
+        
+        overflow: visible;
+        opacity:1;
+    }
+    
 	.coluna-livros figure:hover {
-		left:30px;
+		left:10px;
 		opacity:1;
 		overflow: visible;
 	}
 
 	.coluna-livros figure:hover figcaption{
 		opacity:1;
-		right:-125px;
-		transition:all 1s, opacity 1.5s;
+		right:-120px;
+		transition:all .5s;
 	}
 
 	/*

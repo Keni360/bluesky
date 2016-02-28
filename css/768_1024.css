@@ -5,7 +5,7 @@
     max-width:100%;
 	position:relative;
 	height:auto;
-	min-height:450px;
+	
 }
 
 .sprite-livro{
@@ -419,13 +419,19 @@ div#slideshow section footer{
 section#sobremim{
     display:block;
     height:100vh;
-    min-height:600px;
+	min-height:430px;
     width:100%;
     background-color:#FFB380;
     position:relative;
     overflow: hidden;
 }
 
+	section#sobremim .container{
+		height:100vh;
+		min-height:430px;
+		max-height:none;
+	}
+	
 /* //Mesa */
 #mesa{
     display:block;
@@ -536,16 +542,16 @@ section#sobremim{
 .coluna-livros figure figcaption{
     display: block;
     position:absolute;
-    padding: 10px 5px;
+    padding: 8px 5px;
     border-radius: 2px;
     width:100px;
     height:auto;
-    right:10%;
+    right:-150px;
     background-color:#FFDD55;
     opacity:0;
     transition: all .8s;
     transition-delay: .2s;
-    top:-20%;
+    top:0%;
     font-size: .8em ;
     color:rgba(0,0,0,.6);
     text-align: center;
@@ -563,8 +569,14 @@ section#sobremim{
     left:-19px;
 }
 
+.coluna-livros:hover figure figcaption, .coluna-livros:hover figure{
+        
+        overflow: visible;
+        opacity:1;
+    }    
+    
 .coluna-livros figure:hover {
-    left:30px;
+    left:10px;
     opacity:1;
     overflow: visible;
 }

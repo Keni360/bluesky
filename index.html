@@ -3,17 +3,19 @@
     <head>
         <meta charset='utf-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style></style>
+        <meta property="og:description" content="Desenvolvimento de websites">
+        <meta property="og:image" content="img/mypage.png">
+        <meta property="og:image:width" content="500"> 
+        <meta property="og:image:height" content="282">
+        <meta property="og:image:type" content="image/png">
+        <title>Mauroweb - Mauro Vieira</title>
         <link rel="stylesheet" type='text/css' href='css/core.css'>
         <link rel='stylesheet' media="screen and (min-width: 1024px)" type='text/css' href='css/style.css'>
         <link rel='stylesheet' media="screen and (min-width: 768px) and (max-width: 1024px)" type='text/css' href='css/768_1024.css'>
         <link rel='stylesheet' media="screen and (min-width: 600px) and (max-width: 769px)" type='text/css' href='css/600_769.css'>
         <link rel='stylesheet' media="screen and (min-width: 480px) and (max-width: 599px)" type='text/css' href='css/480_599.css'>
         <link rel='stylesheet' media="screen and (min-width: 300px) and (max-width: 479px)"  type='text/css' href='css/300_479.css'>
-        
-        <style>
-            
-        </style>
+        <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
     </head>
     <body>
         <header id='cabecalho'>
@@ -23,21 +25,21 @@
                     <span class="title-menu">MENU</span>
                              <ul>
                                  <li class="item-off">Menu</li>
-                                 <a href="#home"><li>Home</li></a>
-                                 <a href="#sobremim"><li>Conhecimentos</li></a>
-                                 <a href="#portifolio"><li>Portifolio</li></a>
-                                 <a href="#contato"><li>Contato</li></a>
+                                 <a class="scroll" href="#home"><li>Home</li></a>
+                                 <a class="scroll" href="#sobremim"><li>Conhecimentos</li></a>
+                                 <a class="scroll" href="#portifolio"><li>Portfolio</li></a>
+                                 <a class="scroll" href="#contato"><li>Contato</li></a>
                             </ul>
                 </span>
                 <span class='menu'>
                     <ul>
-                        <a href="#sobremim"><li>Conhecimentos</li></a>
-                        <a href="#portifolio" ><li>Portifolio</li></a>
-                        <a href="#contato"><li>Contato</li></a>
+                        <a class="scroll" href="#sobremim"><li>Conhecimentos</li></a>
+                        <a class="scroll" href="#portifolio" ><li>Portfolio</li></a>
+                        <a class="scroll" href="#contato"><li>Contato</li></a>
                     </ul>
                 </span>        
             </nav>
-            <span style="display:none;" id="resolution">dsd</span>
+            
         </header>
         <main>
             
@@ -89,15 +91,15 @@
                         </header>
                         <aside>
                             <p>
-                                Sites que se adaptam à desktops,
-                                notebooks, smarthphones e tablets.
+                                Sites que se adaptam a desktops,
+                                notebooks, smartphones e tablets.
                             </p>
                         </aside>
                         <figure>
                             <img src='img/pc_cel.png'>
                         </figure>
                         <footer>
-                            <p>confira meu <a href="#portifolio">portifolio</a></p>
+                            <p>confira meu <a class="scroll" href="#portifolio">portfolio</a></p>
                         </footer>
                     </section>
                 </div>    
@@ -192,7 +194,7 @@
                 <span class="container" >
                     <header class="section-title">
                         <span class="faixa">
-                            <h2>Portifolio</h2>
+                            <h2>Portfolio</h2>
                         </span>
                     </header>
                     <section id="portifolio-mokups">
@@ -211,18 +213,18 @@
                         <span id="container-layouts">
                             <figure class="painel-img">
                                 <img src="img/pizzatop.png" alt="pizzatop">
-                                <a href="file:///home/mauro/projetos/PizzaTop/public_html/index.html"></a>
+                                <a href="http://www.maurovieira.16mb.com/portifolio/pizzatop/"></a>
                                 <figcaption>
                                     Pizzatop
-                                    <a target="_blank" href="file:///home/mauro/projetos/PizzaTop/public_html/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
+                                    <a target="_blank" href="http://www.maurovieira.16mb.com/portifolio/pizzatop/" class="btn-raid" id="btn-figure">Ver Demo</a>
                                 </figcaption>
                             </figure>
                             <figure class="painel-img ">
                                 <img src="img/photogrid.png" alt="photogrid">
-                                <a href="file:///home/mauro/projetos/photogrid/index.html"></a>
+                                <a href="http://www.maurovieira.16mb.com/portifolio/photogrid/"></a>
                                 <figcaption>
                                     Photogrid
-                                    <a target="_blank" href="file:///home/mauro/projetos/photogrid/index.html" class="btn-raid" id="btn-figure">Ver Demo</a>
+                                    <a target="_blank" href="http://www.maurovieira.16mb.com/portifolio/photogrid/" class="btn-raid" id="btn-figure">Ver Demo</a>
                                 </figcaption>
                             </figure>
 
