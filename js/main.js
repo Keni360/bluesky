@@ -1,5 +1,22 @@
-window.onload = function(){
-    
+preloader = document.querySelector(".preloader");
+pagina = document.querySelector("#body");
+pagina.style.opacity = "0";
+document.body.style.maxHeight="100vh";
+document.body.style.overflow="hidden";
+
+
+function hidePreloader(){
+	document.body.style.maxHeight="auto";
+	document.body.style.overflow="auto";
+	pagina.style.display = "block";
+	pagina.style.opacity = "1";
+	preloader.style.display = "none";
+}
+
+document.body.onload = function(){
+		//Inicia a função de esconder a tela de carregamento(load da página)
+		hidePreloader();    
+
         var teste = document.querySelector('#nuvens');
         //var telaR = document.querySelector("#resolution");     
     
